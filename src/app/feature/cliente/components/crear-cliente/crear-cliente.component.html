@@ -1,0 +1,15 @@
+<h3>Formalario de cración de clientes</h3>
+<form [formGroup]="clienteForm" (ngSubmit)="crear()">
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Nombre:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="text" id="nombreCliente" name="nombreCliente" placeholder="Nombre del Cliente" class="form-control"
+        formControlName="nombre">
+    </div>
+    <div>
+      <button class="btn" (Click)="crear()" class="btn btn-secondary">Guardar</button>
+    </div>
+  </div>
+</form>

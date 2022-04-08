@@ -1,0 +1,28 @@
+<h3>Formalario de creación de Alquileres</h3>
+<form [formGroup]="alquilerForm" (ngSubmit)="crear()">
+  <div class="row">
+    <div class="form-group">
+      <label class="label">Elige un cliente</label>
+      <div class="control select has-icons-left has-icons-right">
+        <select formControlName="cliente">
+          <option *ngFor="let cliente of liClientes" [ngValue]="cliente">
+            {{ cliente.nombre}}
+          </option>
+          <option selected="true" hidden>Selecciona un cliente</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="label">Elige una pelicula</label>
+      <div class="control select has-icons-left has-icons-right">
+        <select formControlName="pelicula">
+          <option *ngFor="let pelicula of liPeliculas" [ngValue]="pelicula">
+            {{ pelicula.nombre}}
+          </option>
+          <option selected="true" hidden>Selecciona una pelicula</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn" (Click)="crear()" class="btn btn-secondary">Guardar</button>
+  </div>
+</form>

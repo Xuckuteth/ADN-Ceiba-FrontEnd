@@ -1,0 +1,21 @@
+<div class="table-responsive">
+    <table class="table table-success table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Formato</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pelicula of liPeliculas">
+          <td>{{pelicula.id}}</td>
+          <td>{{pelicula.nombre}}</td>
+          <td>{{pelicula.formato}}</td>
+          <td><button (click)="EliminarPelicula(pelicula)">Eliminar</button></td>
+         </tr>
+      </tbody>
+    </table>
+</div>
+

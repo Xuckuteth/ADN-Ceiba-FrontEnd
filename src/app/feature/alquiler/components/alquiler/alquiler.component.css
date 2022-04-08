@@ -1,0 +1,12 @@
+a {
+    padding: 10px;
+    font-size: 30px;
+    margin-right: 3px;
+    margin-top: 10px;
+}
+
+@media (max-width: 400px) {
+    a {
+        font-size: 20px;
+    }
+  }

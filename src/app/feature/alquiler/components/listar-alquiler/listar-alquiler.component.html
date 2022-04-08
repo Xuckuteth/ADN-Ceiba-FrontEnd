@@ -1,0 +1,26 @@
+<div class="table-responsive">
+  <table class="table table-success table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Cliente</th>
+          <th>Película</th>
+          <th>Fecha Alquiler</th>
+          <th>Fecha Devolución</th>
+          <th>Valor</th>
+          <th>Pagar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let alquiler of liAlquileres">
+          <td>{{alquiler.id}}</td>
+          <td>{{alquiler.cliente}}</td>
+          <td>{{alquiler.pelicula}}</td>
+          <td>{{alquiler.fechaAlquiler}}</td>
+          <td>{{alquiler.fechaDevolucion}}</td>
+          <td>{{alquiler.valor}}</td>
+          <td><button (click)="EliminarAlquiler(alquiler)">Pagar</button> </td>
+         </tr>
+      </tbody>
+    </table>
+</div>

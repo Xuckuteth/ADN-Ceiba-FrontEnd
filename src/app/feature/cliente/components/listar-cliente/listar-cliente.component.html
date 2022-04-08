@@ -1,0 +1,20 @@
+<div class="table-responsive">
+  <table class="table table-success table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NOMBRE</th>
+          <th>ESTADO</th>
+          <th>ELIMINAR</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of liClientes">
+          <td>{{cliente.id}}</td>
+          <td>{{cliente.nombre}}</td>
+          <td>{{cliente.estado}}</td>
+          <td><button (click)="EliminarCliente(cliente)">Eliminar</button> </td>
+         </tr>
+      </tbody>
+    </table>
+</div>

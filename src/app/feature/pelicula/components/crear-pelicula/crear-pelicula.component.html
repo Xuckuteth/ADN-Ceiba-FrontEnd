@@ -1,0 +1,23 @@
+<h3>Formalario de cración de películas</h3>
+<form [formGroup]="peliculaForm" (ngSubmit)="crear()">
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Nombre:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="text" id="nombrePelicula" name="nombrePelicula" placeholder="Nombre de la pelicula" class="form-control"
+        formControlName="nombre">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <label>Formato:</label>
+    </div>
+    <div class="col-sm-4">
+      <input validar type="text" id="formatoPelicula" name="formatoPelicula" placeholder="Formato" class="form-control"
+        formControlName="formato">
+    </div>
+  </div>
+  <button class="btn" (Click)="crear()" class="btn btn-secondary">Guardar</button>
+</form>
+
