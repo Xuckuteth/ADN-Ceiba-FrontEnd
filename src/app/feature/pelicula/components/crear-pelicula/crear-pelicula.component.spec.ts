@@ -49,7 +49,8 @@ describe('CrearPeliculaComponent', () => {
 
   it('Registrando pelicula', () => {
     expect(component.peliculaForm.valid).toBeFalsy();
-    component.peliculaForm.controls.nombre.setValue('Estiven');
+    component.peliculaForm.controls.nombre.setValue('Prueba');
+    component.peliculaForm.controls.formato.setValue('DVD');
     expect(component.peliculaForm.valid).toBeTruthy();
 
     component.crear();

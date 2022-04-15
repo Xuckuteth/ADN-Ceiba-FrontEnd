@@ -12,24 +12,24 @@ import { Pelicula } from '../../shared/model/pelicula';
 export class ListarPeliculaComponent implements OnInit {
   public listaPelicula: Observable<Pelicula[]>;
 
-  public liPeliculas:Pelicula[] = []
+  public liPeliculas: Pelicula[] = [];
 
   constructor(protected peliculaService: PeliculaService) { }
 
   ngOnInit() {
    this.ConsultarPeliculas();
    console.log(this.liPeliculas);
-   
+
   }
 
 
   ConsultarPeliculas() {
     this.peliculaService.consultar().subscribe((res) => {
-      this.liPeliculas = res
+      this.liPeliculas = res;
     });
   }
 
-  EliminarPelicula(pelicula:Pelicula) {
+  EliminarPelicula(pelicula: Pelicula) {
     this.peliculaService.eliminar(pelicula).subscribe(() => {
     });
     window.location.href = window.location.href;

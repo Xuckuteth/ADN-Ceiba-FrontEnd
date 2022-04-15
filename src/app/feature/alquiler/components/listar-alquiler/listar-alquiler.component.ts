@@ -12,24 +12,24 @@ import { Alquiler } from '../../shared/model/alquiler';
 export class ListarAlquilerComponent implements OnInit {
   public listaAlquileres: Observable<Alquiler[]>;
 
-  public liAlquileres:Alquiler[] = []
+  public liAlquileres: Alquiler[] = [];
 
   constructor(protected alquilerService: AlquilerService) { }
 
   ngOnInit() {
    this.ConsultarAlquileres();
    console.log(this.liAlquileres);
-   
+
   }
 
 
   ConsultarAlquileres() {
     this.alquilerService.consultar().subscribe((res) => {
-      this.liAlquileres = res
+      this.liAlquileres = res;
     });
   }
 
-  EliminarAlquiler(alquiler:Alquiler) {
+  EliminarAlquiler(alquiler: Alquiler) {
     this.alquilerService.eliminar(alquiler).subscribe(() => {
     });
     window.location.href = window.location.href;

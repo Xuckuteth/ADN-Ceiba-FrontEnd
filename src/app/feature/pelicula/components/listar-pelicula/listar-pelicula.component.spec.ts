@@ -40,9 +40,7 @@ describe('ListarPeliculaComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    component.listaPelicula.subscribe(resultado => {
-      expect(2).toBe(resultado.length);
-  });
+    expect(2).toBe(component.liPeliculas.length);
 });
 
 });

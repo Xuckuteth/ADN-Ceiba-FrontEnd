@@ -16,11 +16,11 @@ describe('ListarAlquilerComponent', () => {
   let fixture: ComponentFixture<ListarAlquilerComponent>;
   let alquilerService: AlquilerService;
 
-  const cliente1: Cliente = new Cliente(1, "Cliente 1", "Estandar");
-  const cliente2: Cliente = new Cliente(2, "Cliente 2", "Estandar");
+  const cliente1: Cliente = new Cliente(1, 'Cliente 1', 'Estandar');
+  const cliente2: Cliente = new Cliente(2, 'Cliente 2', 'Estandar');
 
-  const pelicula1: Pelicula = new Pelicula(1, "Pelicula 1", "DVD");
-  const pelicula2: Pelicula = new Pelicula(1, "Pelicula 1", "DVD");
+  const pelicula1: Pelicula = new Pelicula(1, 'Pelicula 1', 'DVD');
+  const pelicula2: Pelicula = new Pelicula(1, 'Pelicula 1', 'DVD');
 
   const listaAlquileres: Alquiler[] = [new Alquiler(cliente1, pelicula1), new Alquiler(cliente2, pelicula2)];
 
@@ -49,9 +49,7 @@ describe('ListarAlquilerComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    component.listaAlquileres.subscribe(resultado => {
-      expect(2).toBe(resultado.length);
-  });
+    expect(2).toBe(component.liAlquileres.length);
 });
 
 });

@@ -16,5 +16,5 @@ export class AppComponent {
     { url: '/alquiler', nombre: 'Alquiler' }
   ];
 
-  
+
 }

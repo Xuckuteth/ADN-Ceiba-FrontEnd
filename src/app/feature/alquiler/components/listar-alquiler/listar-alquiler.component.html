@@ -12,14 +12,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let alquiler of liAlquileres">
+        <tr *ngFor="let alquiler of liAlquileres" id="liAlquileres">
           <td>{{alquiler.id}}</td>
           <td>{{alquiler.cliente}}</td>
           <td>{{alquiler.pelicula}}</td>
           <td>{{alquiler.fechaAlquiler}}</td>
           <td>{{alquiler.fechaDevolucion}}</td>
           <td>{{alquiler.valor}}</td>
-          <td><button (click)="EliminarAlquiler(alquiler)">Pagar</button> </td>
+          <td><button (click)="EliminarAlquiler(alquiler)" class="btn btn-outline-success" id="pagarAlquiler">Pagar</button> </td>
          </tr>
       </tbody>
     </table>

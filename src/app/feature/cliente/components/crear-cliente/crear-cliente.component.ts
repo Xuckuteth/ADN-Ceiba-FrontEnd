@@ -20,8 +20,8 @@ export class CrearClienteComponent implements OnInit {
     this.clienteServices.guardar(this.clienteForm.value).subscribe((
       res) => {
         console.log(res);
-        
-    })
+
+    });
 }
 
   private construirFormularioCliente() {

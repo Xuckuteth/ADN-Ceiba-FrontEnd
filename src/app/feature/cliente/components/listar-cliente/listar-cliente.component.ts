@@ -12,24 +12,24 @@ import { Cliente } from '../../shared/model/cliente';
 export class ListarClienteComponent implements OnInit {
   public listaClientes: Observable<Cliente[]>;
 
-  public liClientes:Cliente[] = []
+  public liClientes: Cliente[] = [];
 
   constructor(protected clienteService: ClienteService) { }
 
   ngOnInit() {
    this.ConsultarClientes();
    console.log(this.liClientes);
-   
+
   }
 
 
   ConsultarClientes() {
     this.clienteService.consultar().subscribe((res) => {
-      this.liClientes = res
+      this.liClientes = res;
     });
   }
 
-  EliminarCliente(cliente:Cliente) {
+  EliminarCliente(cliente: Cliente) {
     this.clienteService.eliminar(cliente).subscribe(() => {
     });
     window.location.href = window.location.href;

@@ -8,7 +8,7 @@ export class ClienteService {
 
   constructor(protected http: HttpService) {}
 
- 
+
   public consultar() {
     return this.http.doGet<Cliente[]>('/AlquilerPeliculas/clientes');
   }

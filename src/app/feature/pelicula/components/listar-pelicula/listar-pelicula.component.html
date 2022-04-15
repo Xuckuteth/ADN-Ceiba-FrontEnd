@@ -9,11 +9,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let pelicula of liPeliculas">
+        <tr *ngFor="let pelicula of liPeliculas" id="liPeliculas">
           <td>{{pelicula.id}}</td>
           <td>{{pelicula.nombre}}</td>
           <td>{{pelicula.formato}}</td>
-          <td><button (click)="EliminarPelicula(pelicula)">Eliminar</button></td>
+          <td><button (click)="EliminarPelicula(pelicula)" class="btn btn-outline-danger" id="borrarPelicula">Eliminar</button></td>
          </tr>
       </tbody>
     </table>

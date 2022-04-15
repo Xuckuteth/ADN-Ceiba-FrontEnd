@@ -8,11 +8,19 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AlquilerService } from '../../shared/service/alquiler.service';
 import { HttpService } from 'src/app/core/services/http.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { Cliente } from 'src/app/feature/cliente/shared/model/cliente';
+import { Pelicula } from 'src/app/feature/pelicula/shared/model/pelicula';
+import { PeliculaService } from 'src/app/feature/pelicula/shared/service/pelicula.service';
+import { ClienteService } from 'src/app/feature/cliente/shared/service/cliente.service';
 
 describe('CrearAlquilerComponent', () => {
   let component: CrearAlquilerComponent;
   let fixture: ComponentFixture<CrearAlquilerComponent>;
   let alquilerService: AlquilerService;
+
+
+  const cliente: Cliente = new Cliente(1, 'Cliente 1', 'Estandar');
+  const pelicula: Pelicula = new Pelicula(1, 'Pelicula 1', 'DVD');
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -24,7 +32,7 @@ describe('CrearAlquilerComponent', () => {
         ReactiveFormsModule,
         FormsModule
       ],
-      providers: [AlquilerService, HttpService],
+      providers: [AlquilerService, HttpService, ClienteService, PeliculaService],
     })
     .compileComponents();
   }));
@@ -49,12 +57,13 @@ describe('CrearAlquilerComponent', () => {
 
   it('Registrando alquiler', () => {
     expect(component.alquilerForm.valid).toBeFalsy();
-    component.alquilerForm.controls.nombre.setValue('Estiven');
+    component.alquilerForm.controls.cliente.setValue(cliente);
+    component.alquilerForm.controls.pelicula.setValue(pelicula);
     expect(component.alquilerForm.valid).toBeTruthy();
 
     component.crear();
 
     // Aca validamos el resultado esperado al enviar la petición
-    // TODO adicionar expect
+    // TODO adicionar expec
   });
 });

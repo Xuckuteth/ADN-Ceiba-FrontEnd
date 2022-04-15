@@ -28,7 +28,7 @@ describe('ClienteService', () => {
 
   it('deberia listar clientes', () => {
     const dummyClientes = [
-      new Cliente(1, 'Cliente 1', "Estandar"), new Cliente(2, 'Cliente 2', 'Estandar')
+      new Cliente(1, 'Cliente 1', 'Estandar'), new Cliente(2, 'Cliente 2', 'Estandar')
     ];
     service.consultar().subscribe(clientes => {
       expect(clientes.length).toBe(2);

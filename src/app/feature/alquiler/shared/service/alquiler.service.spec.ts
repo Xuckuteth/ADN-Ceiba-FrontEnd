@@ -14,11 +14,11 @@ describe('AlquilerService', () => {
   const apiEndpointAlquilerConsulta = `/AlquilerPeliculas/alquileres`;
   const apiEndpointAlquileres = `/AlquilerPeliculas/alquileres`;
 
-  const cliente1: Cliente = new Cliente(1, "Cliente 1", "Estandar");
-  const cliente2: Cliente = new Cliente(2, "Cliente 2", "Estandar");
+  const cliente1: Cliente = new Cliente(1, 'Cliente 1', 'Estandar');
+  const cliente2: Cliente = new Cliente(2, 'Cliente 2', 'Estandar');
 
-  const pelicula1: Pelicula = new Pelicula(1, "Pelicula 1", "DVD");
-  const pelicula2: Pelicula = new Pelicula(1, "Pelicula 1", "DVD");
+  const pelicula1: Pelicula = new Pelicula(1, 'Pelicula 1', 'DVD');
+  const pelicula2: Pelicula = new Pelicula(1, 'Pelicula 1', 'DVD');
 
   beforeEach(() => {
     const injector = TestBed.configureTestingModule({
@@ -62,7 +62,7 @@ describe('AlquilerService', () => {
     service.eliminar(dummyAlquiler).subscribe((respuesta) => {
       expect(respuesta).toEqual(true);
     });
-    const req = httpMock.expectOne(`${apiEndpointAlquileres}/1`);
+    const req = httpMock.expectOne(`${apiEndpointAlquileres}/${dummyAlquiler.id}`);
     expect(req.request.method).toBe('DELETE');
     req.event(new HttpResponse<boolean>({body: true}));
   });

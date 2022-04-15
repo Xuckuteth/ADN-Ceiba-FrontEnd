@@ -1,5 +1,5 @@
-import { Cliente } from "src/app/feature/cliente/shared/model/cliente";
-import { Pelicula } from "src/app/feature/pelicula/shared/model/pelicula";
+import { Cliente } from 'src/app/feature/cliente/shared/model/cliente';
+import { Pelicula } from 'src/app/feature/pelicula/shared/model/pelicula';
 
 export class Alquiler {
     id: number;

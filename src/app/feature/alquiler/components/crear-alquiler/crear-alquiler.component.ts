@@ -14,13 +14,13 @@ import { Pelicula } from 'src/app/feature/pelicula/shared/model/pelicula';
 })
 export class CrearAlquilerComponent implements OnInit {
   alquilerForm: FormGroup;
-  liClientes:Cliente[];
-  liPeliculas:Pelicula[];
+  liClientes: Cliente[];
+  liPeliculas: Pelicula[];
 
 
   constructor(protected alquilerServices: AlquilerService,
               protected clienteService: ClienteService,
-              protected peliculaService: PeliculaService,) { }
+              protected peliculaService: PeliculaService) { }
 
 
 
@@ -31,12 +31,12 @@ export class CrearAlquilerComponent implements OnInit {
 
   crear() {
     console.log(this.alquilerForm.value);
-    
+
     this.alquilerServices.guardar(this.alquilerForm.value).subscribe((
       res) => {
         console.log(res);
-        
-    })
+
+    });
 }
 
 
@@ -50,10 +50,10 @@ export class CrearAlquilerComponent implements OnInit {
 
   private ConsultarData() {
     this.clienteService.consultar().subscribe((res) => {
-      this.liClientes = res
+      this.liClientes = res;
     });
-  this.peliculaService.consultar().subscribe((res) => {
-    this.liPeliculas = res
+    this.peliculaService.consultar().subscribe((res) => {
+    this.liPeliculas = res;
   });
   }
 

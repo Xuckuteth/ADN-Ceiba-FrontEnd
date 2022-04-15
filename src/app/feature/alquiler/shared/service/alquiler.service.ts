@@ -18,7 +18,6 @@ export class AlquilerService {
   }
 
   public eliminar(alquiler: Alquiler) {
-    return this.http.doDelete<boolean>(`/AlquilerPeliculas/alquileres/${alquiler.id}`,
-                                                 this.http.optsName('eliminar alquileres'));
+    return this.http.doDelete<boolean>(`/AlquilerPeliculas/alquileres/${alquiler.id}`);
   }
 }

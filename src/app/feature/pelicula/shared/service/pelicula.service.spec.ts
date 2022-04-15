@@ -50,7 +50,7 @@ describe('PeliculaService', () => {
   });
 
   it('deberia eliminar una pelicula', () => {
-    const dummyPelicula = new Pelicula(1, 'Pelicula 1','DVD');
+    const dummyPelicula = new Pelicula(1, 'Pelicula 1', 'DVD');
     service.eliminar(dummyPelicula).subscribe((respuesta) => {
       expect(respuesta).toEqual(true);
     });
