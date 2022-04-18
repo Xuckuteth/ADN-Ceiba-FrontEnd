@@ -4,8 +4,8 @@
     <div class="form-group">
       <label class="label">Elige un cliente</label>
       <div class="control select has-icons-left has-icons-right">
-        <select formControlName="cliente">
-          <option *ngFor="let cliente of liClientes" [ngValue]="cliente" id="clienteAlquiler">
+        <select formControlName="cliente" id="clienteAlquiler">
+          <option *ngFor="let cliente of liClientes" [ngValue]="cliente">
             {{ cliente.nombre}}
           </option>
           <option selected="true" hidden>Selecciona un cliente</option>
@@ -15,8 +15,8 @@
     <div class="form-group">
       <label class="label">Elige una pelicula</label>
       <div class="control select has-icons-left has-icons-right">
-        <select formControlName="pelicula">
-          <option *ngFor="let pelicula of liPeliculas" [ngValue]="pelicula" id="peliculaAlquiler">
+        <select formControlName="pelicula" id="peliculaAlquiler">
+          <option *ngFor="let pelicula of liPeliculas" [ngValue]="pelicula" >
             {{ pelicula.nombre}}
           </option>
           <option selected="true" hidden>Selecciona una pelicula</option>

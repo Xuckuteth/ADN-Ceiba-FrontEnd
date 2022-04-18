@@ -16,7 +16,7 @@ describe('workspace-project Alquiler', () => {
 
     it('Deberia crear alquiler', () => {
         const NOMBRE_CLIENTE = 'Camila';
-        const NOMBRE_PELICULA = 'Alien';
+        const NOMBRE_PELICULA = 'Matrix';
 
         page.navigateTo();
         navBar.clickBotonAlquileres();
@@ -26,13 +26,12 @@ describe('workspace-project Alquiler', () => {
         alquiler.clickBotonGuardarAlquiler();
 
         // Adicionamos las validaciones despues de la creación
-        // expect(<>).toEqual(<>);
 
         page.navigateTo();
         navBar.clickBotonAlquileres();
         alquiler.clickBotonListarAlquileres();
 
-        expect(7).toBe(alquiler.contarAlquileres());
+        expect(6).toBe(alquiler.contarAlquileres());
     });
 
     it('Deberia pagar alquiler', () => {
@@ -42,7 +41,7 @@ describe('workspace-project Alquiler', () => {
         alquiler.clickBotonPagarAlquiler();
 
         // Adicionamos las validaciones despues de la creación
-        // expect(<>).toEqual(<>);
+        expect(5).toBe(alquiler.contarAlquileres());
     });
 
     it('Deberia listar alquileres', () => {
@@ -50,7 +49,7 @@ describe('workspace-project Alquiler', () => {
         navBar.clickBotonAlquileres();
         alquiler.clickBotonListarAlquileres();
 
-        expect(6).toBe(alquiler.contarAlquileres());
+        expect(5).toBe(alquiler.contarAlquileres());
     });
 
     afterEach(async () => {
