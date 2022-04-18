@@ -62,14 +62,15 @@ pipeline {
         }
         
 
-  stage('Static Code Analysis') {
-    steps{
-      echo '------------>Análisis de código estático<------------'
-		  sonarqubeMasQualityGatesP(sonarKey:'co.com.ceiba.adn:adn.alquilerFront.estiven.montoya',
-      sonarName:'''"ADN-Alquiler_Front(estiven.montoya)"''',
-      sonarPathProperties:'./sonar-project.properties')
-    }
-  }
+        stage('Static Code Analysis') {
+          steps{
+             echo '------------>Análisis de código estático<------------'
+		        sonarqubeMasQualityGatesP(sonarKey:'co.com.ceiba.adn:adn.alquilerFront.estiven.montoya',
+            sonarName:'''"ADN-Alquiler_Front(estiven.montoya)"''',
+            sonarPathProperties:'./sonar-project.properties')
+            }
+        }
+      }
 
     post{
         always {
