@@ -70,26 +70,5 @@ pipeline {
         sh 'npm run build'
       }
   }
-
-  post {
-    always {
-      echo 'This will always run'
-    }
-    success {
-      echo 'This will run only if successful'
-	  junit '**/test-results/test/*.xml'  //RUTA DE LOS ARCHIVOS .XML
-    }
-    failure {
-      echo 'This will run only if failed'
-	  mail (to: 'estiven.montoya@ceiba.com.co',subject: "Failed Pipeline:${currentBuild.fullDisplayName}",body: "Something is wrong with ${env.BUILD_URL}")
-    }
-    unstable {
-      echo 'This will run only if the run was marked as unstable'
-    }
-    changed {
-      echo 'This will run only if the state of the Pipeline has changed'
-      echo 'For example, if the Pipeline was previously failing but is now successful'
-    }
-  }
 }
 }
