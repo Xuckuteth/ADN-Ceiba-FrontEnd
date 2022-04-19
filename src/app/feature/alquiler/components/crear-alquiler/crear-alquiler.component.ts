@@ -39,6 +39,14 @@ export class CrearAlquilerComponent implements OnInit {
     });
 }
 
+  private ConsultarData() {
+    this.clienteService.consultar().subscribe((res) => {
+      this.liClientes = res;
+    });
+    this.peliculaService.consultar().subscribe((res) => {
+      this.liPeliculas = res;
+    });
+  }
 
 
   private construirFormularioAlquiler() {
@@ -48,13 +56,6 @@ export class CrearAlquilerComponent implements OnInit {
     });
   }
 
-  private ConsultarData() {
-    this.clienteService.consultar().subscribe((res) => {
-      this.liClientes = res;
-    });
-    this.peliculaService.consultar().subscribe((res) => {
-    this.liPeliculas = res;
-  });
-  }
+
 
 }

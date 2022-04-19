@@ -47,14 +47,6 @@ describe('CrearAlquilerComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('formulario es invalido cuando esta vacio', () => {
-    expect(component.alquilerForm.valid).toBeFalsy();
-  });
-
   it('Registrando alquiler', () => {
     expect(component.alquilerForm.valid).toBeFalsy();
     component.alquilerForm.controls.cliente.setValue(cliente);
