@@ -18,9 +18,7 @@ export class CrearPeliculaComponent implements OnInit {
 
   crear() {
     this.peliculaServices.guardar(this.peliculaForm.value).subscribe((
-      res) => {
-        console.log(res);
-
+      res) => {(res);
     });
 }
 

@@ -18,9 +18,7 @@ export class CrearClienteComponent implements OnInit {
 
   crear() {
     this.clienteServices.guardar(this.clienteForm.value).subscribe((
-      res) => {
-        console.log(res);
-
+      res) => {(res);
     });
 }
 

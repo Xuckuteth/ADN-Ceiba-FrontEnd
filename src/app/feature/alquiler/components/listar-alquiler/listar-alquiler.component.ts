@@ -18,8 +18,7 @@ export class ListarAlquilerComponent implements OnInit {
 
   ngOnInit() {
    this.consultarAlquileres();
-   console.log(this.liAlquileres);
-
+   this.liAlquileres;
   }
 
 

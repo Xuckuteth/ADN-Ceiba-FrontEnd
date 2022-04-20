@@ -31,8 +31,7 @@ export class CrearAlquilerComponent implements OnInit {
 
   crear() {
     this.alquilerServices.guardar(this.alquilerForm.value).subscribe((
-      res) => {
-        console.log(res);
+      res) => {(res);
     });
 }
 
