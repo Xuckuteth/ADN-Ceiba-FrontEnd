@@ -52,11 +52,7 @@ pipeline {
                 sh 'npm run test'
             }
         }
-<<<<<<< HEAD
-
-=======
         
->>>>>>> e317e3d9ec71249bccde1cc7bcc38481c091c076
         stage('Static Code Analysis') {
           steps{
              echo '------------>Análisis de código estático<------------'
