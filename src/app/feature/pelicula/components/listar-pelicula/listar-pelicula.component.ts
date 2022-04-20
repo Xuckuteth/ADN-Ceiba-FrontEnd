@@ -18,7 +18,6 @@ export class ListarPeliculaComponent implements OnInit {
 
   ngOnInit() {
    this.consultarPeliculas();
-   this.liPeliculas;
   }
 
 

@@ -18,8 +18,6 @@ export class ListarClienteComponent implements OnInit {
 
   ngOnInit() {
    this.consultarClientes();
-   this.liClientes;
-
   }
 
 

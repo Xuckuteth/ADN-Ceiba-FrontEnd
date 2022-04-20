@@ -10,6 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class CrearPeliculaComponent implements OnInit {
   peliculaForm: FormGroup;
+  public respuesta = null;
   constructor(protected peliculaServices: PeliculaService) { }
 
   ngOnInit() {
@@ -18,7 +19,8 @@ export class CrearPeliculaComponent implements OnInit {
 
   crear() {
     this.peliculaServices.guardar(this.peliculaForm.value).subscribe((
-      res) => {(res);
+      res) => {
+        this.respuesta = res;
     });
 }
 
