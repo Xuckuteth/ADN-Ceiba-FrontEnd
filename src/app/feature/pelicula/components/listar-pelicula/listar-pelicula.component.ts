@@ -17,19 +17,19 @@ export class ListarPeliculaComponent implements OnInit {
   constructor(protected peliculaService: PeliculaService) { }
 
   ngOnInit() {
-   this.ConsultarPeliculas();
+   this.consultarPeliculas();
    console.log(this.liPeliculas);
 
   }
 
 
-  ConsultarPeliculas() {
+  consultarPeliculas() {
     this.peliculaService.consultar().subscribe((res) => {
       this.liPeliculas = res;
     });
   }
 
-  EliminarPelicula(pelicula: Pelicula) {
+  eliminarPelicula(pelicula: Pelicula) {
     this.peliculaService.eliminar(pelicula).subscribe(() => {
     });
     window.location.href = window.location.href;

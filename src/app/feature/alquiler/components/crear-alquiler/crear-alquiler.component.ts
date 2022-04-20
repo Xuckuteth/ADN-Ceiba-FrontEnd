@@ -25,7 +25,7 @@ export class CrearAlquilerComponent implements OnInit {
 
 
   ngOnInit() {
-    this.ConsultarData();
+    this.consultarData();
     this.construirFormularioAlquiler();
   }
 
@@ -36,7 +36,7 @@ export class CrearAlquilerComponent implements OnInit {
     });
 }
 
-  private ConsultarData() {
+  private consultarData() {
     this.clienteService.consultar().subscribe((res) => {
       this.liClientes = res;
     });

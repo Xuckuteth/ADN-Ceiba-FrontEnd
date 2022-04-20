@@ -17,19 +17,19 @@ export class ListarClienteComponent implements OnInit {
   constructor(protected clienteService: ClienteService) { }
 
   ngOnInit() {
-   this.ConsultarClientes();
+   this.consultarClientes();
    console.log(this.liClientes);
 
   }
 
 
-  ConsultarClientes() {
+  consultarClientes() {
     this.clienteService.consultar().subscribe((res) => {
       this.liClientes = res;
     });
   }
 
-  EliminarCliente(cliente: Cliente) {
+  eliminarCliente(cliente: Cliente) {
     this.clienteService.eliminar(cliente).subscribe(() => {
     });
     window.location.href = window.location.href;

@@ -17,19 +17,19 @@ export class ListarAlquilerComponent implements OnInit {
   constructor(protected alquilerService: AlquilerService) { }
 
   ngOnInit() {
-   this.ConsultarAlquileres();
+   this.consultarAlquileres();
    console.log(this.liAlquileres);
 
   }
 
 
-  ConsultarAlquileres() {
+  consultarAlquileres() {
     this.alquilerService.consultar().subscribe((res) => {
       this.liAlquileres = res;
     });
   }
 
-  EliminarAlquiler(alquiler: Alquiler) {
+  eliminarAlquiler(alquiler: Alquiler) {
     this.alquilerService.eliminar(alquiler).subscribe(() => {
     });
     window.location.href = window.location.href;
