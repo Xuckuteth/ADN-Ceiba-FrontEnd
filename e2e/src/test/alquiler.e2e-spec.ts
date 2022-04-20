@@ -41,6 +41,10 @@ describe('workspace-project Alquiler', () => {
         alquiler.clickBotonPagarAlquiler();
 
         // Adicionamos las validaciones despues de la creación
+        page.navigateTo();
+        navBar.clickBotonAlquileres();
+        alquiler.clickBotonListarAlquileres();
+
         expect(5).toBe(alquiler.contarAlquileres());
     });
 

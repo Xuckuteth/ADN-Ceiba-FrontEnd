@@ -32,6 +32,5 @@ export class ListarAlquilerComponent implements OnInit {
   EliminarAlquiler(alquiler: Alquiler) {
     this.alquilerService.eliminar(alquiler).subscribe(() => {
     });
-    window.location.href;
   }
 }
