@@ -32,5 +32,6 @@ export class ListarPeliculaComponent implements OnInit {
   EliminarPelicula(pelicula: Pelicula) {
     this.peliculaService.eliminar(pelicula).subscribe(() => {
     });
+    window.location.href = window.location.href;
   }
 }

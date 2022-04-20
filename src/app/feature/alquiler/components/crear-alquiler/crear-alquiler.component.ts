@@ -30,12 +30,9 @@ export class CrearAlquilerComponent implements OnInit {
   }
 
   crear() {
-    console.log(this.alquilerForm.value);
-
     this.alquilerServices.guardar(this.alquilerForm.value).subscribe((
       res) => {
         console.log(res);
-
     });
 }
 
