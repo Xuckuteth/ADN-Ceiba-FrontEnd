@@ -14,7 +14,6 @@ export class ClienteService {
   }
 
   public guardar(cliente: Cliente) {
-    console.log(cliente);
     return this.http.doPost<Cliente, boolean>(`/AlquilerPeliculas/clientes`, cliente);
   }
 

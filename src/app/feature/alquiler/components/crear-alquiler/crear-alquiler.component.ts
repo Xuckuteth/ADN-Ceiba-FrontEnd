@@ -14,6 +14,7 @@ import { Pelicula } from 'src/app/feature/pelicula/shared/model/pelicula';
 })
 export class CrearAlquilerComponent implements OnInit {
   alquilerForm: FormGroup;
+  public respuesta = null;
   liClientes: Cliente[];
   liPeliculas: Pelicula[];
 
@@ -31,7 +32,8 @@ export class CrearAlquilerComponent implements OnInit {
 
   crear() {
     this.alquilerServices.guardar(this.alquilerForm.value).subscribe((
-      res) => {(res);
+      res) => {( 
+        this.respuesta = res);
     });
 }
 

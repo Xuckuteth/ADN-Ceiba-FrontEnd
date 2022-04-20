@@ -10,6 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class CrearClienteComponent implements OnInit {
   clienteForm: FormGroup;
+  public respuesta = null;
   constructor(protected clienteServices: ClienteService) { }
 
   ngOnInit() {
@@ -18,7 +19,8 @@ export class CrearClienteComponent implements OnInit {
 
   crear() {
     this.clienteServices.guardar(this.clienteForm.value).subscribe((
-      res) => {(res);
+      res) => {(
+        this.respuesta = res);
     });
 }
 
