@@ -32,6 +32,6 @@ export class ListarClienteComponent implements OnInit {
   EliminarCliente(cliente: Cliente) {
     this.clienteService.eliminar(cliente).subscribe(() => {
     });
-    window.location.href = window.location.href;
+    window.location.href;
   }
 }
