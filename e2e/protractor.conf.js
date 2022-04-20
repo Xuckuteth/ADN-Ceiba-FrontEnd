@@ -18,7 +18,6 @@ exports.config = {
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
-  useAllAngular2AppRoots: true,
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,

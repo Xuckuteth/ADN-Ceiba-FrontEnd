@@ -52,4 +52,6 @@ describe('ListarAlquilerComponent', () => {
     expect(2).toBe(component.liAlquileres.length);
 });
 
+afterEach(() => { TestBed.resetTestingModule(); });
+afterAll(() => { TestBed.resetTestingModule(); });
 });

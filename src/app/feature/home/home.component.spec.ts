@@ -22,4 +22,7 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  afterEach(() => { TestBed.resetTestingModule(); });
+  afterAll(() => { TestBed.resetTestingModule(); });
 });

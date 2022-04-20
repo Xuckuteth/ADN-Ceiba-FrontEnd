@@ -43,4 +43,7 @@ describe('ListarClienteComponent', () => {
     expect(2).toBe(component.liClientes.length);
 });
 
+afterEach(() => { TestBed.resetTestingModule(); });
+afterAll(() => { TestBed.resetTestingModule(); });
+
 });

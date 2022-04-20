@@ -43,4 +43,7 @@ describe('ListarPeliculaComponent', () => {
     expect(2).toBe(component.liPeliculas.length);
 });
 
+afterEach(() => { TestBed.resetTestingModule(); });
+afterAll(() => { TestBed.resetTestingModule(); });
+
 });

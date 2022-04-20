@@ -58,4 +58,7 @@ describe('CrearPeliculaComponent', () => {
     // Aca validamos el resultado esperado al enviar la petición
     // TODO adicionar expect
   });
+
+  afterEach(() => { TestBed.resetTestingModule(); });
+  afterAll(() => { TestBed.resetTestingModule(); });
 });

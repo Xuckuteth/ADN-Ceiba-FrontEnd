@@ -58,4 +58,7 @@ describe('ClienteService', () => {
     expect(req.request.method).toBe('DELETE');
     req.event(new HttpResponse<boolean>({body: true}));
   });
+
+  afterEach(() => { TestBed.resetTestingModule(); });
+  afterAll(() => { TestBed.resetTestingModule(); });
 });
